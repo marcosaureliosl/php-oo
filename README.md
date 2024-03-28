@@ -21,6 +21,10 @@ Agora entre na pasta com o terminal
 
 E agora basta rodar o docker
 
+`docker rm setup-php -f`
+`docker rm setup-nginx -f`
+`docker rm setup-mysql -f`
+
 `docker-compose up -d`
 
 Pronto,é sucesso!
