@@ -16,4 +16,13 @@ abstract class AbstractController
         include_once "../views/{$view}.php";
         include_once "../views/_partials/footer.php";
     }
+
+    public function entityManager(): mixed {
+        $entityManager = require_once dirname(__DIR__, 2).'/bootstrap.php';
+        return $entityManager;
+    }
+    public function redirect(string $url) : void
+    {
+        header("location: {$url}");
+    }
 }
